@@ -1,5 +1,6 @@
 package zw.co.pabuwe.polarbookshop.catalogservice.demo;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.annotation.Profile;
 import org.springframework.context.event.EventListener;
@@ -10,15 +11,11 @@ import zw.co.pabuwe.polarbookshop.catalogservice.domain.BookRepository;
 import java.util.List;
 
 @Component
-//@RequiredArgsConstructor
+@RequiredArgsConstructor
 @Profile("testdata")
 public class BookDataLoader {
 
     private final BookRepository bookRepository;
-
-    public BookDataLoader(BookRepository bookRepository) {
-        this.bookRepository = bookRepository;
-    }
 
     @EventListener(ApplicationReadyEvent.class)
     public void loadBookTestData() {
