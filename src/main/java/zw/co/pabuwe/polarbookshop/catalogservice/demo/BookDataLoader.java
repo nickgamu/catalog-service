@@ -20,8 +20,8 @@ public class BookDataLoader {
     @EventListener(ApplicationReadyEvent.class)
     public void loadBookTestData() {
         bookRepository.deleteAll();
-        var book1 = Book.of("1234567891", "Quantic EMBA Guide", "Quantic", 60.00);
-        var book2 = Book.of("1234567892", "Cloud Native Spring in Action", "Thomas Vitale", 23.00);
+        var book1 = Book.of("1234567891", "Quantic EMBA Guide", "Quantic", 60.00, "Quantic Pub");
+        var book2 = Book.of("1234567892", "Cloud Native Spring in Action", "Thomas Vitale", 23.00, "Manning Press");
         bookRepository.saveAll(List.of(book1, book2));
     }
 
