@@ -7,7 +7,6 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 import zw.co.pabuwe.polarbookshop.catalogservice.domain.BookNotFoundException;
 import zw.co.pabuwe.polarbookshop.catalogservice.domain.BookService;
-import zw.co.pabuwe.polarbookshop.catalogservice.web.BookController;
 
 import static org.mockito.BDDMockito.given;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
