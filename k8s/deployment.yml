@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: catalog-service
-          image: catalog-service
+          image: ghcr.io/nickgamu/catalog-service
           imagePullPolicy: IfNotPresent
           lifecycle:
             preStop:
@@ -30,6 +30,6 @@ spec:
             - name: SPRING_DATASOURCE_URL
               value: jdbc:postgresql://polar-postgres:5432/polardb_catalog
             - name: SPRING_CLOUD_CONFIG_URI
-              value: http://config-service:8888
+              value: http://config-service
             - name: SPRING_PROFILES_ACTIVE
               value: testdata
