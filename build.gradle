@@ -10,7 +10,7 @@ sourceCompatibility = '17'
 
 ext {
 	set('springCloudVersion', "2021.0.3")
-	set('testcontainersVersion', "1.17.2")
+	set('testcontainersVersion', "1.17.3")
 }
 
 configurations {
@@ -48,7 +48,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
 	runtimeOnly 'org.postgresql:postgresql'
 	implementation 'org.springframework.retry:spring-retry'
-	implementation 'org.springdoc:springdoc-openapi-ui:1.6.9'
+	implementation 'org.springdoc:springdoc-openapi-ui:1.6.11'
 	implementation 'org.flywaydb:flyway-core'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.boot:spring-boot-starter-webflux'
