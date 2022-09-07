@@ -1,5 +1,6 @@
 package zw.co.pabuwe.polarbookshop.catalogservice.web;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import zw.co.pabuwe.polarbookshop.catalogservice.domain.Book;
@@ -9,6 +10,7 @@ import javax.validation.Valid;
 
 @RestController
 @RequestMapping("books")
+@Slf4j
 public class BookController {
 
     private final BookService bookService;
@@ -19,6 +21,7 @@ public class BookController {
 
     @GetMapping
     public Iterable<Book> get() {
+        log.info("Fetching the list of books in the catalog");
         return bookService.viewBookList();
     }
 
